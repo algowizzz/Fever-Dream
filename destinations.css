@@ -1,0 +1,355 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: beautiful;
+    src: url(Beautiful\ Dream.otf);
+}
+
+@font-face {
+    font-family: forever;
+    src: url(Forever\ Freedom\ Regular.ttf);
+}
+
+@font-face {
+    font-family: miso-bold;
+    src: url(miso-bold.otf);
+}
+
+@font-face {
+    font-family: wasted;
+    src: url(Wasted-Vindey.ttf);
+}
+
+.main-structure {
+    background: url('https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 45px;
+    height: 50vh;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease, width 0.3s ease, top 0.3s ease, gap 0.3s ease, background-color 0.3s ease;
+    top: 25%;
+    right: 1%;
+    gap: 3%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav_:first-child {
+    padding-top: 15px;
+}
+
+.nav:hover {
+    height: 70vh;
+    width: 80px;
+    top: 15%;
+    gap: 7%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav_ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav_:hover {
+    filter: opacity(0.7);
+}
+
+.nav_ img {
+    width: 25px;
+    filter: invert(1);
+}
+
+.nav_ span {
+    font-size: 12px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-top: 10px;
+}
+
+.nav:hover .nav_ span {
+    opacity: 1;
+}
+
+.logo {
+    position: fixed;
+    color: black;
+    text-decoration: none;
+    font-size: 150%;
+    font-family: beautiful;
+    padding: 1em 0 0 2em;
+    z-index: 1000;
+}
+
+.section {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 130%;
+    
+}
+
+.top-thing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20vh;
+}
+
+.top-thing p:first-child {
+    font-family: forever;
+    font-size: 20vh;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,1));
+    letter-spacing: 10px;
+}
+
+.top-thing p:nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    color: white;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,1));
+    margin-top: -18vh;
+}
+
+.continent-names {
+    width: 80%;
+    height: 9vh;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.continent-names ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    list-style: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.continent-names ul a {
+    text-decoration: none;
+    color: white;
+    transition: filter 0.2s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.continent-names ul a:hover {
+    filter: opacity(0.7);
+}
+
+.spacing1 {
+    width: 100%;
+    height: 100vh;
+}
+
+.main {
+    width: 85%;
+    height: 100%;
+    background-color: rgba(122, 122, 122, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8em;
+    border: 1px solid rgba(0,0,0,0.1);
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5em;
+    justify-items: center;
+}
+
+.spacing {
+    height: 5em;
+}
+
+.continent {
+    color: white;
+    font-family: miso-bold;
+    font-size: 80px;
+    filter: drop-shadow(2px 1px 10px black);
+}
+
+.white-back {
+    background: rgb(255, 248, 235);
+    width: 85%;
+    height: 20em;
+    border-radius: 2em;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+}
+
+.white-back:nth-child(even) {
+    background: rgb(255, 248, 235);
+    width: 85%;
+    height: 20em;
+    border-radius: 2em;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    direction: rtl;
+}
+
+.txt-cont {
+    direction: ltr;
+}
+
+.img-cont {
+    padding: 1em;
+}
+
+.img-cont .img {
+    width: 18em;
+    height: 18em;
+    overflow: hidden;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img div {
+    filter: drop-shadow(2px 1px 10px black);
+    color: white;
+    font-family: miso-bold;
+    font-size: 3em;
+}
+
+.txt-cont {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 3fr 1fr;
+    padding: 20px;
+}
+
+.txt {
+    width: 90%;
+    grid-column: span 4;
+    display: flex;
+    justify-self: center ;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    font-family: wasted;
+    letter-spacing: 1px;
+}
+
+.footer-top-space {
+    height: 30vh;
+}
+
+.conutry-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conutry-links a {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.find-links {
+    background-color: rgba(0,0,0,0.7);
+    width: 10em;
+    height: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    border-radius: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.find-links:hover {
+    background-color: rgb(0,0,0);
+}
+
+.find-links img {
+    width: 25px;
+    filter: invert();
+}
+
+.find-links p {
+    font-size: 15px;
+}
+
+.footer-top-space {
+    height: 30vh;
+}
+
+footer {
+    height: 40vh;
+    background-color: black;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    justify-content: center;
+    justify-items: center
+}
+
+footer > p {
+    color: white;
+    font-family: beautiful;
+    font-size: 50px;
+}
+
+footer div p {
+    color: rgb(190, 190, 190);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.madeby {
+    color: rgb(190, 190, 190);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+html {
+    scroll-behavior: smooth;
+}

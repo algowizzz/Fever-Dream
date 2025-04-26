@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: beautiful;
+    src: url(Beautiful\ Dream.otf);
+}
+
+@font-face {
+    font-family: forever;
+    src: url(Forever\ Freedom\ Regular.ttf);
+}
+
+@font-face {
+    font-family: miso-bold;
+    src: url(miso-bold.otf);
+}
+
+@font-face {
+    font-family: wasted;
+    src: url(Wasted-Vindey.ttf);
+}
+
+.main-structure {
+    background: url('https://images.pexels.com/photos/1774929/pexels-photo-1774929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 45px;
+    height: 50vh;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease, width 0.3s ease, top 0.3s ease, gap 0.3s ease, background-color 0.3s ease;
+    top: 25%;
+    right: 1%;
+    gap: 3%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav_:first-child {
+    padding-top: 15px;
+}
+
+.nav:hover {
+    height: 70vh;
+    width: 80px;
+    top: 15%;
+    gap: 7%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav_ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav_:hover {
+    filter: opacity(0.7);
+}
+
+.nav_ img {
+    width: 25px;
+    filter: invert(1);
+}
+
+.nav_ span {
+    font-size: 12px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-top: 10px;
+}
+
+.nav:hover .nav_ span {
+    opacity: 1;
+}
+
+.logo {
+    position: fixed;
+    color: black;
+    text-decoration: none;
+    font-size: 150%;
+    font-family: beautiful;
+    padding: 1em 0 0 2em;
+    z-index: 1000;
+}
+
+.section {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100%;
+    
+}
+
+.top-thing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20vh;
+}
+
+.top-thing p:first-child {
+    font-family: forever;
+    font-size: 20vh;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,1));
+}
+
+.top-thing p:nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    color: white;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,1));
+    margin-top: -18vh;
+}
+
+.spacing1 {
+    width: 100%;
+    height: 100vh;
+}
+
+.main {
+    background: rgba(0, 0, 0, 0.1);
+    width: 85%;
+    height: 100vh;
+    justify-self: center;
+    border-radius: 8em;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img {
+    background: url(https://media.istockphoto.com/id/1216283260/photo/paper-cardboard-background-natural-corrugated-carton-sheet-kraft-cardboard-texture-with.jpg?s=612x612&w=0&k=20&c=iXZG_oQk6YFphT-cnb5ihMwKeqpfmcAoGwlU_1AafRQ=) no-repeat center center/cover;
+    width: 50em;
+    height: 30em;
+    border-radius: 2em;
+    filter: drop-shadow(2px 2px 5px black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-part {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-part p:nth-child(1) {
+    color: white;
+    font-size: 80px;
+    font-family: miso-bold;
+    filter: drop-shadow(2px 1px 5px black);
+}
+
+.contact-part p:nth-child(2) {
+    color: rgb(255, 255, 255);
+    font-family: miso-bold;
+    font-size: 50px;
+    filter: drop-shadow(2px 1px 5px black);
+}
+
+.contact-part p:nth-child(3) {
+    color: black;
+    font-family: wasted;
+    font-size: 24px;
+}
+
+.contact-part p:nth-child(4) {
+    color: black;
+    font-family: wasted;
+    font-size: 24px;
+    text-align: center;
+}
+
+.email-button {
+    background-color: rgba(0,0,0,0.5);
+    width: 10em;
+    height: 3em;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.email-button:hover {
+    background-color: black;
+}
+
+.email-button img{
+    width: 30px;
+    filter: invert()
+}
+
+.contact-part a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-top-space {
+    height: 30vh;
+}
+
+footer {
+    height: 40vh;
+    background-color: black;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    justify-content: center;
+    justify-items: center
+}
+
+footer > p {
+    color: white;
+    font-family: beautiful;
+    font-size: 50px;
+}
+
+footer div p {
+    color: rgb(190, 190, 190);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.madeby {
+    color: rgb(190, 190, 190);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}

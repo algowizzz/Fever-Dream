@@ -1,0 +1,302 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: beautiful;
+    src: url(Beautiful\ Dream.otf);
+}
+
+@font-face {
+    font-family: forever;
+    src: url(Forever\ Freedom\ Regular.ttf);
+}
+
+@font-face {
+    font-family: miso-bold;
+    src: url(miso-bold.otf);
+}
+
+@font-face {
+    font-family: wasted;
+    src: url(Wasted-Vindey.ttf);
+}
+
+.main-structure {
+    background: url('https://wallpaperaccess.com/full/1318082.jpg') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 100;
+}
+
+.nav {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 45px;
+    height: 50vh;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease, width 0.3s ease, top 0.3s ease, gap 0.3s ease, background-color 0.3s ease;
+    top: 25%;
+    right: 1%;
+    gap: 3%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav_:first-child {
+    padding-top: 15px;
+}
+
+.nav:hover {
+    height: 70vh;
+    width: 80px;
+    top: 15%;
+    gap: 7%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav_ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav_:hover {
+    filter: opacity(0.7);
+}
+
+.nav_ img {
+    width: 25px;
+    filter: invert(1);
+}
+
+.nav_ span {
+    font-size: 12px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-top: 10px;
+}
+
+.nav:hover .nav_ span {
+    opacity: 1;
+}
+
+.logo {
+    position: fixed;
+    color: black;
+    text-decoration: none;
+    font-size: 150%;
+    font-family: beautiful;
+    padding: 1em 0 0 2em;
+    z-index: 1000;
+}
+
+.section {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100%;
+    
+}
+
+.top-thing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20vh;
+}
+
+.top-thing p:first-child {
+    font-family: forever;
+    font-size: 20vh;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,1));
+}
+
+.top-thing p:nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    color: white;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,1));
+    margin-top: -18vh;
+}
+
+.spacing1 {
+    width: 100%;
+    height: 100vh;
+}
+
+.main {
+    width: 85%;
+    height: 100%;
+    background-color: rgba(122, 122, 122, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8em;
+    border: 1px solid rgba(0,0,0,0.1);
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5em;
+    justify-items: center;
+}
+
+.a001 {
+    height: 5em;
+}
+
+.top-txt {
+    font-size: 80px;
+    font-family: miso-bold;
+    color: white;
+    filter: drop-shadow(2px 1px 10px rgba(0,0,0,1));
+}
+
+.owner-cont {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards {
+    background: rgb(255, 248, 235);
+    width: 22em;
+    height: 35em;
+    border-radius: 3em;
+    filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.5));
+    display: grid;
+    grid-template-rows: 22em 1fr 4fr 3fr;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.a121 {
+    width: 20em;
+    height: 20em;
+    background: black;
+    border-radius: 2em;
+    justify-self: center;
+    filter: drop-shadow(1px 0 1px rgba(0,0,0,0.5));
+}
+
+.name {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    font-family: wasted;
+    font-size: 18px;
+    filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.5));
+    width: 90%;
+    height: 60px;
+    justify-self: center;
+    background-color: rgb(254, 239, 208);
+}
+
+.name p {
+    width: 90%;
+}
+
+.para {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.read-more {
+    justify-self: center;
+    height: 3em;
+}
+
+.read-more a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.read-more a div {
+    background-color: rgba(0,0,0,0.7);
+    width: 7em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    transition: background-color 0.2 ease;
+}
+
+.read-more a div:hover {
+    background-color: black;
+}
+
+.cards:hover {
+    transform: scale(1.01);
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
+}
+
+.footer-top-space {
+    height: 30vh;
+}
+
+footer {
+    height: 40vh;
+    background-color: black;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    justify-content: center;
+    justify-items: center
+}
+
+footer > p {
+    color: white;
+    font-family: beautiful;
+    font-size: 50px;
+}
+
+footer div p {
+    color: rgb(190, 190, 190);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.madeby {
+    color: rgb(190, 190, 190);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
